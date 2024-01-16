@@ -3,5 +3,6 @@ public class Az {
         System.out.println("Hello Class AZ");
         System.out.println("How are you");
         System.out.println("I Hope everything is okay");
+        System.out.println("JAVA is OOP Language");
     }
 }
