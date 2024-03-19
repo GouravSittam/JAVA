@@ -12,9 +12,9 @@ class A {
     }
 }
 
-    public class fb { // Moved FirstProgram to a public static class
-        public static void main (String[] args) { // Corrected main method signature
-            A.B obj = new A.B(); // Corrected class reference
+    public class fb { 
+        public static void main (String[] args) { 
+            A.B obj = new A.B(); 
             obj.get();
         }
     }
