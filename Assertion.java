@@ -9,5 +9,3 @@ public class Assertion {
         System.out.println("Value is " + value);
     }
 }
-
-
