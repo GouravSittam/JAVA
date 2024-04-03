@@ -1,110 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enhanced Form</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    form {
-      max-width: 400px;
-      width: 100%;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-
-    input {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    button {
-      background-color: #4caf50;
-      color: #fff;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    #welcomeMessage {
-      display: none;
-      text-align: center;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel and Tourism</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Your custom CSS file -->
 </head>
 <body>
 
-  <form id="myForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Travel & Tourism</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+<!-- Banner Section -->
+<section class="banner">
+    <div class="container text-center">
+        <h1>Welcome to Our Travel Website</h1>
+        <p>Your gateway to explore the world!</p>
+    </div>
+</section>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+<!-- Featured Destinations Section -->
+<section class="featured-destinations">
+    <div class="container">
+        <h2>Featured Destinations</h2>
+        <!-- Add your featured destinations here -->
+    </div>
+</section>
 
-    <button type="button" onclick="validateForm()">Submit</button>
-  </form>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container text-center">
+        <p>&copy; 2024 Travel & Tourism</p>
+    </div>
+</footer>
 
-  <div id="welcomeMessage">
-    <h2>Welcome!</h2>
-    <p>Thank you for submitting the form.</p>
-  </div>
-
-  <script>
-    function validateForm() {
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-
-        if (!name || !/^[a-zA-Z]+$/.test(name)) {
-            alert('Please enter a valid name.');
-            return;
-        }
-        if (!email || !/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
-            alert('Please enter a valid email.');
-            return;
-        }
-        if (!password || password.length < 8) {
-            alert('Please enter a password of at least 8 characters.');
-            return;
-        }
-
-        document.getElementById('welcomeMessage').style.display = 'block';
-        setTimeout(function() {
-            document.getElementById('welcomeMessage').style.display = 'none';
-        }, 3000);
-    }
-  </script>
-
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
